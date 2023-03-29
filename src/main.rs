@@ -4,21 +4,21 @@ fn main() {
     let bundle = get_bundle_identifier_or_default("firefox");
     set_application(&bundle).unwrap();
 
-    println!("bundle");
+    println!("bundle {bundle}");
 
-    send_notification(
+    dbg!(send_notification(
         "Danger",
         Some("Will Robinson"),
         "Run away as fast as you can",
         None,
     )
-    .unwrap();
+    .unwrap());
 
-    send_notification(
+    dbg!(send_notification(
         "NOW",
         None,
         "Without subtitle",
         Some(Notification::new().sound("Blow")),
     )
-    .unwrap();
+    .unwrap());
 }
