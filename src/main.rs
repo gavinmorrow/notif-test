@@ -4,6 +4,8 @@ fn main() {
     let bundle = get_bundle_identifier_or_default("firefox");
     set_application(&bundle).unwrap();
 
+    println!("bundle");
+
     send_notification(
         "Danger",
         Some("Will Robinson"),
